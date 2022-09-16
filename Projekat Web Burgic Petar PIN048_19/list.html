@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Song list</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' href='styles/style.css'>
+    <link rel="icon" href="images/music_logo.PNG">
+
+</head>
+
+<body>
+    <div class="Container" id="ContainerSongs">
+        <div id="filterContainer">
+            <div>
+              <input type="text" id="songInput" placeholder="Song name:">
+            </div>
+            <select name="drop" id="ddlPerformer">
+                <option>All performers</option>
+            </select>
+            <select name="drop" id="ddlAlbum">
+                <option>All albums</option>
+            </select>
+        </div>
+        <div id="filter">
+            <button class="redButton" id="findDiv">
+                <div><img src="images/find.png" alt=""></div>
+                <p>Find</p>
+            </button>
+            <div class="redButton" id="reset"><div></div></div>
+            <button class="redButton" id="useLastFilter">
+                <nobr>Use last filter</nobr>
+            </button>
+        </div>
+        <div id="sortDiv">
+            <select name="drop" id="ddlSort">
+                <option disabled selected>Sort by</option>
+                <option>Song name</option>
+                <option>Length</option>
+                <option>Album</option>
+                <option>Performer</option>
+            </select>
+            <input class="HiddenRb" type="radio" id="asc" name="s" checked>
+            <label class="HiddenRb" for="asc">A-Z</label>
+            <input class="HiddenRb" type="radio" id="desc" name="s">
+            <label class="HiddenRb" for="desc">Z-A</label>
+        </div>
+        <div id="totalDiv"><div>Total songs listed: <span id="totalSongs"></span></div>&nbsp;&nbsp;&nbsp;<div><span>Total length: </span><span
+                id="totalLength"></span></div></div>
+        <ul id="songList"></ul>
+        <div id="individualView"></div>
+        <div id="backOnTop"></div>
+    </div>
+
+    <script src='scripts/songs.js'></script>
+    <script src='scripts/script.js'></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+
+</html>
